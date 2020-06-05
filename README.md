@@ -13,9 +13,9 @@ Using both LCD and I2C Driver code implemented seperately as well as combined.
  - In Linux Platform (Ubuntu) implemented
  - using structure file operations ,feeded the all the fuctions like read,write,open,close etc.
  - when ever ,we do any operation in the application code ,that particular operation is to be reflected in the driver code
- - Driver code is represented in (.mk) format,it is inserted into kernel space command called  " insmod _____.mk "
+ - Driver code is represented in (.ko) format,it is inserted into kernel space command called  " insmod _____.ko "
  - We can check ,whether it is inserted or not by doing "lsmod | head" means all the driver modules that are running in the kernel space ,display on command prompt,that to top 10
- - If you want to remove module or driver "rmmod ____.mk"
+ - If you want to remove module or driver "rmmod ____.ko"
  - Once you inserted you can see the constructor called function is executed as well as destructor also.
  - Basically it is a character special file.
  - After inserting the charcter special file you have to register the character special file ,through a specific function called " register_chrdev() ", This function gives the major and minor numbering.
